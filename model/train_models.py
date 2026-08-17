@@ -1,26 +1,6 @@
 """
 Breast Cancer Wisconsin (Diagnostic) - Model Training Pipeline (train_model.py)
 ================================================================================
-Trains 5 classifiers, tunes hyperparameters via cross-validation (rather
-than guessing constraint values), evaluates on a held-out test set,
-and persists everything needed for deployment (models, scaler, metrics,
-feature schema) to `saved_models/`.
-
-Key design decisions (see docstrings inline for why):
-- Stratified 80/20 split for the final hold-out test set.
-- Scaler fit ONLY on training data, then reused at inference time.
-- Decision Tree hyperparameters chosen via GridSearchCV + 10-fold CV,
-  not guessed -  guessed constraints (max_depth=4) were tested and
-  found to UNDERPERFORM the unconstrained tree in CV (0.9086 vs 0.9262
-  mean accuracy), so we let the grid search find a better constraint.
-- Random Forest is left near-default since bagging already regularizes
-  it; CV showed manual max_depth constraints made ~no difference.
-- Naive Bayes trained on UNSCALED data (GaussianNB is not exactly
-  scale-invariant in practice; unscaled is simpler and was marginally
-  stronger in testing). Documented here so the choice is intentional,
-  not accidental.
-- Every model's CV mean/std AND single-split test metrics are saved to
-  metrics.json, so results are always paired with their reliability.
 """
 
 import os
