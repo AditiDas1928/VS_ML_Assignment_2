@@ -14,7 +14,7 @@ from sklearn.metrics import (
 st.set_page_config(page_title="Classification Dashboard", layout="wide")
 st.title("Machine Learning Classification Evaluation Platform")
 
-MODEL_DIR = "saved_models"
+MODEL_DIR = "model/saved_models"
 MODELS_USING_SCALED_INPUT = ["Logistic Regression", "kNN"]
 
 MODEL_FILES = {
