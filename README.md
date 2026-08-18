@@ -2,7 +2,7 @@
 
 An interactive Streamlit web application that trains, evaluates, and compares multiple Machine Learning classification algorithms on a multi-feature dataset.
 
-## Project Overview
+## Problem Statement
 This project benchmarks 5 classification models across 6 standard performance metrics to provide a unified evaluation platform.
 
 ### Dataset Specifications
