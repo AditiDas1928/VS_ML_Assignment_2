@@ -35,9 +35,8 @@ This project benchmarks 5 classification models across 6 standard performance me
 └── README.md                # Project documentation
 ## How to Run Locally
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/AditiDas1928/VS_ML_Assignment_2.git](https://github.com/AditiDas1928/VS_ML_Assignment_2.git)
+## Github Link
+https://github.com/AditiDas1928/VS_ML_Assignment_2
 
    ## Final Test-Set Performance Comparison
 
